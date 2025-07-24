@@ -1,0 +1,263 @@
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("background.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  backdrop-filter: blur(10px);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #1DB954;
+  font-family: 'Orbitron', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #1DB954;
+}
+
+.login-btn {
+  background: #1DB954;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  animation: glitch 1s infinite;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+.cta {
+  margin-top: 1.5rem;
+  background: white;
+  color: #1DB954;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #1DB954;
+  color: white;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.tracks {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.tracks h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1DB954;
+}
+
+.track-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.track {
+  background: rgba(40, 40, 40, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s;
+}
+
+.track:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #1DB954;
+}
+
+.track img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.track p {
+  margin: 0.8rem 0;
+  font-weight: bold;
+}
+
+.play-btn {
+  background: #1DB954;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.wave {
+  margin-top: 10px;
+  height: 10px;
+  background: linear-gradient(to right, #1DB954 0%, transparent 25%, #1DB954 50%, transparent 75%, #1DB954 100%);
+  background-size: 200% 100%;
+  animation: wave 1.2s linear infinite;
+  display: none;
+  border-radius: 5px;
+}
+
+@keyframes wave {
+  from { background-position: 200% 0; }
+  to { background-position: 0 0; }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #aaa;
+  backdrop-filter: blur(10px);
+  margin-top: 2rem;
+}
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+/* BROWSE SECTION */
+.browse {
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.browse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.browse-item {
+  background: rgba(29, 185, 84, 0.2);
+  border: 1px solid #1DB954;
+  color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.browse-item:hover {
+  background: #1DB954;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* YOUR LIBRARY SECTION */
+.library {
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.library-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.library-list li {
+  margin: 0.8rem 0;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-weight: bold;
+  color: white;
+}
+
+.library-list li:hover {
+  background: #1DB954;
+  color: #000;
+  transform: scale(1.03);
+}
