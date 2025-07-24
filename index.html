@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Reimagined</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🎵 Spotify</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#browse">Browse</a>
+      <a href="#library">Your Library</a>
+    </nav>
+    <button class="login-btn">Sign In</button>
+  </header>
+
+  <section class="hero glass">
+    <h1>Feel the Beat. Like Never Before.</h1>
+    <p>Stream your favorite tracks in a brand new style.</p>
+    <button class="cta">Start Listening</button>
+  </section>
+
+  <section class="tracks glass">
+    <h2>🔥 Trending Tracks</h2>
+    <div class="track-list">
+      <div class="track">
+        <img src="https://i.imgur.com/7u1SfwK.png" alt="Track 1">
+        <p>Blinding Lights</p>
+        <button class="play-btn" data-audio="assets/song1.mp3">▶</button>
+        <div class="wave"></div>
+      </div>
+      <div class="track">
+        <img src="https://i.imgur.com/Z8LQZ9U.png" alt="Track 2">
+        <p>Levitating</p>
+        <button class="play-btn" data-audio="assets/song1.mp3">▶</button>
+        <div class="wave"></div>
+      </div>
+      <div class="track">
+        <img src="https://i.imgur.com/jT2g5dl.png" alt="Track 3">
+        <p>Unstoppable</p>
+        <button class="play-btn" data-audio="assets/song1.mp3">▶</button>
+        <div class="wave"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSE Section -->
+  <section id="browse" class="browse glass">
+    <h2>🎧 Explore by Mood</h2>
+    <div class="browse-grid">
+      <div class="browse-item">Chill</div>
+      <div class="browse-item">Workout</div>
+      <div class="browse-item">Focus</div>
+      <div class="browse-item">Party</div>
+      <div class="browse-item">Sleep</div>
+      <div class="browse-item">Classical</div>
+    </div>
+  </section>
+
+  <!-- YOUR LIBRARY Section -->
+  <section id="library" class="library glass">
+    <h2>📚 Your Library</h2>
+    <ul class="library-list">
+      <li>❤️ Liked Songs</li>
+      <li>🎶 Recently Played</li>
+      <li>📝 Your Playlists</li>
+      <li>📀 Saved Albums</li>
+      <li>🎤 Followed Artists</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Spotify Reimagined | Designed by [saish kotkar]</p>
+  </footer>
+
+  <audio id="audio-player"></audio>
+
+</body>
+</html>
